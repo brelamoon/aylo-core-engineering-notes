@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Separating Public Catalog State From Review Assets — AYLO Core</title><meta name="description" content="AYLO Core engineering note on explicit release state, catalog validation and internal-review boundaries."><link rel="stylesheet" href="../article.css"></head><body><main>
+<a class="back" href="/aylo-core-engineering-notes/">← Engineering notes</a><div class="label">AYLO Core · Release boundary</div>
+<h1>A source asset is not automatically a public product.</h1>
+<p>Visual teams need room to review images, metadata and pricing before a collection becomes part of the public product. A generated image should not appear in a campaign merely because its path was imported.</p>
+<h2>One release decision</h2><p>The checkout resolver, public UI and marketing campaign need to respect the same publication state. A release gate verifies that the file exists, identifiers are unique, the image format is correct, pricing is intentional and the destination page can render the item.</p>
+<h2>Communication becomes clearer</h2><p>Explicit publication state keeps shipped behavior, internal review and roadmap separate. Campaign links can then reference the released catalog instead of a development directory or authenticated preview.</p>
+<p class="note">The official public catalog is the source of truth for current availability.</p>
+<a class="cta" href="https://aylo.technology/aylo-core?utm_source=github_pages&amp;utm_medium=technical&amp;utm_campaign=aylo_engineering_2026_09&amp;utm_content=publication_boundary">Open the public catalog</a><p><a href="https://t.me/aylocore">English community</a> · <a href="https://www.instagram.com/aylo.core/">Instagram</a></p>
+</main></body></html>

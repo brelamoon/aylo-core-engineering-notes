@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reserving One-of-One Checkout Inventory Safely — AYLO Core</title><meta name="description" content="AYLO Core engineering note on temporary server-side reservations and reliable one-of-one checkout boundaries."><link rel="stylesheet" href="../article.css"></head><body><main>
+<a class="back" href="/aylo-core-engineering-notes/">← Engineering notes</a><div class="label">AYLO Core · Commerce architecture</div>
+<h1>A checkout URL is not proof of ownership.</h1>
+<p>When a digital item has a visible supply of one, opening a payment page cannot be treated as a completed purchase. Two visitors may try to buy the same identity at nearly the same time.</p>
+<h2>Reserve on the server</h2><p>The AYLO Core checkout architecture creates a temporary server-side reservation before redirecting to the hosted payment page. The reservation and checkout session share an expiration boundary. If session creation fails, the reservation is released. Completion is handled separately from session creation.</p>
+<h2>Three durable rules</h2><ol><li>Never let the browser decide that inventory is reserved.</li><li>Make reservation and release operations idempotent.</li><li>Treat a generated checkout URL as pending state, not proof of payment.</li></ol>
+<p class="note">The hosted checkout handoff is the verified boundary discussed here. This note does not claim a completed production payment.</p>
+<a class="cta" href="https://aylo.technology/aylo-core?utm_source=github_pages&amp;utm_medium=technical&amp;utm_campaign=aylo_engineering_2026_09&amp;utm_content=inventory_reservation">Open the AYLO Core catalog</a><p><a href="https://t.me/aylocore">English community</a> · <a href="https://www.instagram.com/aylo.core/">Instagram</a></p>
+</main></body></html>

@@ -1,0 +1,12 @@
+:root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: #08090b; color: #f4f4f5; }
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(circle at 78% 0%, #173a3d 0, transparent 34%), #08090b; }
+main { max-width: 760px; margin: 0 auto; padding: 72px 24px 100px; }
+.label { color: #5eead4; text-transform: uppercase; letter-spacing: .14em; font-size: 12px; }
+h1 { margin: 18px 0 30px; font-size: clamp(40px, 8vw, 70px); line-height: 1; letter-spacing: -.045em; }
+h2 { margin-top: 46px; font-size: 25px; }
+p, li { color: #c7c9ce; font-size: 18px; line-height: 1.7; }
+a { color: #fff; text-decoration-color: #5eead4; text-underline-offset: 4px; }
+.back { display: inline-block; margin-bottom: 36px; color: #9ca3af; }
+.cta { display: inline-block; margin-top: 28px; padding: 13px 18px; border-radius: 999px; background: #ecfeff; color: #0b1718; font-weight: 700; text-decoration: none; }
+.note { margin-top: 42px; padding-left: 18px; border-left: 3px solid #5eead4; }

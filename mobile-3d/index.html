@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Keeping 3D Product Pages Fast on Mobile — AYLO Core</title><meta name="description" content="AYLO Core engineering note on mobile GLTF viewing, bounded frame work, reduced motion and WebGL cleanup."><link rel="stylesheet" href="../article.css"></head><body><main>
+<a class="back" href="/aylo-core-engineering-notes/">← Engineering notes</a><div class="label">AYLO Core · Mobile 3D</div>
+<h1>Mobile 3D performance is a budget.</h1>
+<p>A reliable viewer combines several small controls: capped device pixel ratio, one animation loop, bounded frame delta, compact lighting and explicit cleanup.</p>
+<h2>Keep a useful first frame</h2><p>The static preview remains visible while the model loads. The renderer uses a transparent canvas so the viewer fits the surrounding product design. Camera fitting responds to both model bounds and card aspect ratio instead of relying on one hard-coded distance.</p>
+<h2>Interaction is part of performance</h2><p>Automatic rotation pauses while a visitor drags and respects reduced-motion settings. When the component leaves the page, animation stops and WebGL resources are released instead of accumulating across navigation.</p>
+<p class="note">The wider page still matters. Image dimensions, carousel neighborhood size and the number of active viewers can overwhelm a well-written renderer.</p>
+<a class="cta" href="https://aylo.technology/aylo-core?utm_source=github_pages&amp;utm_medium=technical&amp;utm_campaign=aylo_engineering_2026_09&amp;utm_content=mobile_3d">View the AYLO Core catalog</a><p><a href="https://t.me/aylocore">English community</a> · <a href="https://www.instagram.com/aylo.core/">Instagram</a></p>
+</main></body></html>

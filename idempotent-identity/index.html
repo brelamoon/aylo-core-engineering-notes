@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Designing Idempotent Identity Issuance — AYLO Core</title><meta name="description" content="AYLO Core engineering note on email-bound purchase claims, retries and idempotent identity issuance."><link rel="stylesheet" href="../article.css"></head><body><main>
+<a class="back" href="/aylo-core-engineering-notes/">← Engineering notes</a><div class="label">AYLO Core · Identity architecture</div>
+<h1>Identity issuance must survive retries.</h1>
+<p>Commerce and identity become tightly coupled when a purchase should later appear inside a user account. The fragile implementation assumes that every callback succeeds exactly once.</p>
+<h2>Connect through a verified address</h2><p>AYLO Core’s current direction allows avatar checkout to begin with the buyer’s email. Server-side identity allocation and the purchase reservation are associated with a protected representation of that email. When the person later verifies the same address inside AYLO, the system can claim the completed entitlement without exposing an internal identifier.</p>
+<h2>Idempotency is the central rule</h2><p>Payment callbacks retry. Email confirmations retry. Users close and reopen applications. Every claim operation needs to produce the same final ownership state when it receives the same valid event again.</p>
+<p class="note">Reservation and hosted-checkout handoff are the verified boundaries. Successful paid fulfillment remains a separate end-to-end proof requirement.</p>
+<a class="cta" href="https://aylo.technology/aylo-core?utm_source=github_pages&amp;utm_medium=technical&amp;utm_campaign=aylo_engineering_2026_09&amp;utm_content=identity_issuance">Explore AYLO Core</a><p><a href="https://t.me/aylocore">English community</a> · <a href="https://www.instagram.com/aylo.core/">Instagram</a></p>
+</main></body></html>
